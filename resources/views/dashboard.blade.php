@@ -200,8 +200,13 @@
                     @if(auth()->user()->hasRole('administrador'))
                         <a href="{{ route('admin.users.index') }}" 
                            class="flex flex-col items-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
-                            <i class="fas fa-cog text-purple-600 text-2xl mb-2"></i>
-                            <span class="text-sm font-medium text-purple-900">Administrar</span>
+                            <i class="fas fa-users-cog text-purple-600 text-2xl mb-2"></i>
+                            <span class="text-sm font-medium text-purple-900">Usuarios</span>
+                        </a>
+                        <a href="{{ route('admin.plants.index') }}" 
+                           class="flex flex-col items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                            <i class="fas fa-seedling text-green-600 text-2xl mb-2"></i>
+                            <span class="text-sm font-medium text-green-900">Plantas</span>
                         </a>
                     @else
                         <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">

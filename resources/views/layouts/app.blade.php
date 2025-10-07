@@ -41,7 +41,10 @@
                             
                             @if(auth()->user()->hasRole('administrador'))
                                 <a href="{{ route('admin.users.index') }}" class="text-white hover:text-green-200 px-3 py-2 rounded-md">
-                                    <i class="fas fa-cog mr-1"></i> Admin
+                                    <i class="fas fa-users-cog mr-1"></i> Usuarios
+                                </a>
+                                <a href="{{ route('admin.plants.index') }}" class="text-white hover:text-green-200 px-3 py-2 rounded-md">
+                                    <i class="fas fa-seedling mr-1"></i> Plantas
                                 </a>
                             @endif
                         </div>
