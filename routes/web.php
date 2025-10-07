@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\UserManagementController;
+use App\Http\Controllers\Admin\PlantController as AdminPlantController;
 
 // Página principal
 Route::get('/', function () {
@@ -45,4 +46,7 @@ Route::middleware(['auth', 'role:administrador'])->prefix('admin')->name('admin.
     Route::resource('users', UserManagementController::class);
     Route::post('users/{user}/reset-points', [UserManagementController::class, 'resetPoints'])->name('users.reset-points');
     Route::post('users/{user}/add-points', [UserManagementController::class, 'addPoints'])->name('users.add-points');
+
+    // Gestión de plantas
+    Route::resource('plants', AdminPlantController::class);
 });

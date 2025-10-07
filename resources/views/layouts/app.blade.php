@@ -12,7 +12,7 @@
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body class="bg-gray-50 min-h-screen flex flex-col">
     <!-- Navegación -->
     <nav class="bg-green-600 shadow-lg">
         <div class="max-w-7xl mx-auto px-4">
@@ -40,8 +40,8 @@
                             </a>
                             
                             @if(auth()->user()->hasRole('administrador'))
-                                <a href="{{ route('admin.users.index') }}" class="text-white hover:text-green-200 px-3 py-2 rounded-md">
-                                    <i class="fas fa-cog mr-1"></i> Admin
+                                <a href="{{ route('admin.plants.index') }}" class="text-white hover:text-green-200 px-3 py-2 rounded-md">
+                                    <i class="fas fa-leaf mr-1"></i> Plantas
                                 </a>
                             @endif
                         </div>
@@ -99,7 +99,7 @@
     </nav>
 
     <!-- Contenido principal -->
-    <main class="max-w-7xl mx-auto py-6 px-4">
+    <main class="flex-1 max-w-7xl mx-auto py-6 px-4">
         <!-- Mensajes de sesión -->
         @if(session('success'))
             <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
